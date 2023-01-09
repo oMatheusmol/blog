@@ -1,0 +1,18 @@
+
+
+.noticia-block:hover {
+  background-color: #ade;
+}
+
+.noticia-block {
+  position: relative;
+}
+
+.noticia-data-autor {
+  bottom: 0;
+  color: #ccc;
+}
+
+.noticia-block:hover .noticia-data-autor {
+  color: #000;
+}
