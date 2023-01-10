@@ -1,10 +1,13 @@
 .home {
-  width: 100%;
-  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
   background-image: url(../images/background.webp);
   background-size: cover;
   background-position: center;
-  border: 1px solid red;
 }
 
 .home-text {
@@ -19,8 +22,8 @@
   padding-left: 50px;
 }
 
-.home-text-frase {
-  padding-top: 400px;
+.space {
+  width: 30px;
 }
 
 .title-main {

@@ -12,7 +12,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div class="header" style={{ display: 'flex', alignItems: 'center' }}>
+    <div class="header" style={{ display: 'flex', alignItems: 'center', width }}>
       <nav
         className="title-main"
         style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 999, backdropFilter: 'blur(3px)' }}

@@ -67,6 +67,9 @@ nav a {
   text-decoration: line-through;
 }
 
+.spacer {
+  margin: 0 10px;
+}
 .spacer-main-navigation {
   margin: 0 2px;
 }
@@ -74,3 +77,4 @@ progress {
   height: 0.24em;
   width: 100%;
 }
+
