@@ -11,10 +11,13 @@ const Noticia = (props) => {
   }, [id]);
 
   return noticia ? (
-    <div>
+    <div style={{ paddingTop: '300px' }}>
       <h1>{noticia.titulo}</h1>
-      <img src={noticia.imagem} alt="notica-imagem" />
+      <img src={noticia.imagem} alt="notica-imagem" style={{ width: '800px' }} />
       <h3>{noticia.conteudo}</h3>
+      <h3>
+        {noticia.data} por {noticia.autor}
+      </h3>
     </div>
   ) : null;
 };

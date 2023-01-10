@@ -35,7 +35,7 @@ const Blog = () => {
       {noticias.map((noticia) => (
         <div key={noticia.id} style={estiloBloco} className="noticia-block">
           <Link to={noticia.id} key={noticia.id}>
-            <img src={noticia.imagem} className="noticia-image" alt="imagem" />
+            <img src={noticia.imagem} className="noticia-image" alt="imagem" style={{ width: '500px' }} />
             <h2 className="noticia-titulo" style={estiloTitulo}>
               {noticia.titulo}
             </h2>

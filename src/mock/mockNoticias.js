@@ -1,31 +1,31 @@
 import logo from '../images/logo.svg';
+import docker from '../images/docker.jpg';
 
 const noticias = [
   {
     id: '1',
-    imagem: logo,
-    titulo: 'Qual VPN tem o melhor custo-benefício? As discussões na Comunidade do TB',
+    imagem: docker,
+    titulo: 'Como realmente funciona o Docker',
     data: '21/04/2020',
-    conteudo:
-      'Conteúdo da notíciaonteúdo da notícia onteúdo da notícia onteúdo da notícia onteúdo da notícia onteúdo da notícia onteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notícia ',
-    autor: 'Matheus Mol',
-  },
-  {
-    id: '2',
-    imagem: logo,
-    titulo: 'Quaasdasdade do TB',
-    data: '21/04/2020',
-    conteudo:
-      'Conteúdo da notíciaonteúdo da notícia onteúdo da notícia onteúdo da notícia onteúdo da notícia onteúdo da notícia onteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notícia ',
-    autor: 'Matheus Mol',
-  },
-  {
-    id: '3',
-    imagem: logo,
-    titulo: 'GHUYASGYUAG AGSabsajs TB',
-    data: '21/04/2020',
-    conteudo:
-      'Conteúdo da notíciaonteúdo da notícia onteúdo da notícia onteúdo da notícia onteúdo da notícia onteúdo da notícia onteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notíciaonteúdo da notícia ',
+    conteudo: `O Docker é um software de containerização que permite que os usuários embalem e distribuam aplicativos com todas as suas dependências de forma fácil e rápida. Com o Docker, é possível criar containers que encapsulam aplicativos e suas dependências em um pacote portátil, garantindo que o aplicativo possa ser executado de maneira consistente em qualquer ambiente, independentemente das diferenças em sistemas operacionais ou configurações. Além disso, o Docker também fornece uma série de recursos para gerenciar e distribuir os containers, tornando mais fácil para os desenvolvedores criar e implantar aplicativos de maneira rápida e eficiente. Neste artigo, vamos explorar os principais conceitos e componentes do Docker e como eles funcionam juntos para permitir a criação e gerenciamento de containers de maneira fácil e eficiente.
+
+      O  Docker é baseado em dois mecanismos do sistema operacional: o Overlay File System (OFS) e os namespaces, bem como o Cgroups. Mas como funciona esses mecanismos?
+      
+      Para garantir que os containers possam ser executados de maneira consistente em qualquer ambiente, o Docker usa um conjunto de mecanismos chamados namespaces. Os namespaces são mecanismos do sistema operacional que permitem que os recursos de um processo sejam vistos como se fossem exclusivos para esse processo, mesmo que eles estejam compartilhados com outros processos.
+      O Docker usa os namespaces para isolar os recursos de cada container uns dos outros e do host. Isso significa que, para um processo em execução em um container, os outros processos em execução no mesmo container e no host são vistos como processos diferentes. Isso é útil porque permite que os containers compartilhem o mesmo sistema operacional, mas tenham recursos exclusivos e independentes. O Docker oferece vários namespaces diferentes, incluindo pid, user, network e file system, cada um dos quais isola um conjunto específico de recursos.
+      
+      O namespace pid do Docker isola os processos de um container uns dos outros e do host. Isso significa que, para um processo em execução em um container, os outros processos em execução no mesmo container e no host são vistos como processos diferentes. Isso é útil porque permite que os processos em um container tenham acesso exclusivo aos recursos do sistema, como CPU e memória, e não sejam afetados por outros processos em execução no host ou em outros containers.
+      O namespace user do Docker isola os usuários e grupos de um container uns dos outros e do host. Isso significa que, para um usuário em um container, os outros usuários no mesmo container e no host são vistos como usuários diferentes. Isso é útil porque permite que os usuários em um container tenham acesso exclusivo aos arquivos e diretórios do sistema e não sejam afetados por outros usuários no host ou em outros containers.
+      O namespace network do Docker isola o espaço de endereço de rede de um container uns dos outros e do host. Isso significa que, para um container, os outros containers e o host são vistos como sistemas diferentes na rede. Isso é útil porque permite que os containers tenham endereços de rede exclusivos e não sejam afetados por outros containers ou pelo host.
+      O namespace file system do Docker isola o sistema de arquivos de um container uns dos outros e do host. Isso significa que, para um container, os arquivos e diretórios no mesmo container e no host são vistos como arquivos e diretórios diferentes. Isso é útil porque permite que os containers tenham acesso exclusivo aos arquivos e diretórios do sistema e não sejam afetados por outros containers ou pelo host. Além disso, o namespace file system também permite que os containers tenham suas próprias configurações de sistema de arquivos, como permissões de arquivo e links simbólicos, sem afetar o host ou outros containers.
+      O Cgroups (Control Groups) é um mecanismo do sistema operacional que permite limitar, priorizar e medir o uso de recursos do sistema por processos. O Docker usa o Cgroups para limitar o uso de recursos, como CPU, memória e E/S de disco, por cada container. Isso é útil para garantir que cada container tenha acesso justo aos recursos do sistema e para evitar que um container "roube" recursos de outros containers ou do host. Além de limitar o uso de recursos, o Cgroups também permite priorizar o uso de recursos entre containers e medir o uso de recursos por container.
+      O Overlay File System (OFS) é um sistema de arquivos que permite sobrepor um sistema de arquivos em outro, permitindo que os arquivos e diretórios de um sistema de arquivos sejam "espelhados" em outro sistema de arquivos. O Docker usa o OFS para criar imagens de container, que são modelos de containers pré-configurados que podem ser usados para criar novos containers rapidamente. Quando você cria uma imagem de container, o Docker usa o OFS para sobrepor um sistema de arquivos vazio em cima de um sistema de arquivos base, permitindo que você adicione arquivos e configurações personalizadas à imagem sem alterar o sistema de arquivos base. Isso é útil porque permite que você crie imagens de container personalizadas rapidamente e de forma fácil, sem precisar instalar ou configurar o sistema operacional ou outras dependências manualmente. Além disso, o OFS também permite que você crie imagens de container que possam ser compartilhadas e reutilizadas por outros usuários ou aplicativos.
+      
+      O Docker Host é o sistema operacional onde o Docker é instalado e onde os containers são executados. O Docker Daemon é o processo que roda no Docker Host e é responsável por gerenciar os containers. A API do Docker é a interface que permite que os usuários e aplicativos interajam com o Docker Daemon. O Cache do Docker é um armazenamento temporário para as imagens de container que são usadas com frequência. O Registry do Docker é um repositório de imagens de container que pode ser usado para armazenar e compartilhar imagens de container. Os Volumes do Docker são espaços de armazenamento persistentes que podem ser usados pelos containers.
+      O Docker Client é um aplicativo que permite que os usuários interajam com o Docker Daemon de forma a gerenciar containers, imagens de container e volumes de container. O Docker Client pode ser usado em linha de comando ou por meio de uma API de programação. Ele permite que os usuários criem, execute, gerencie e distribuam containers de maneira fácil e rápida. Além disso, o Docker Client também fornece uma série de recursos para gerenciar imagens de container, como criar, compartilhar e baixar imagens de container, e gerenciar volumes de container, como criar, mapear e gerenciar volumes persistentes para os containers.
+      Em resumo, o Docker é uma ferramenta poderosa e versátil para criar, gerenciar e distribuir containers de maneira fácil e eficiente. Com os namespaces, o Cgroups e o OFS, o Docker permite que os usuários criem containers que são isolados uns dos outros e do host, garantindo que os aplicativos possam ser executados de maneira consistente em qualquer ambiente. Além disso, o Docker Host, o Docker Daemon, a API do Docker, o Cache do Docker, o Registry do Docker e os Volumes do Docker fornecem uma série de recursos para gerenciar e distribuir os containers de maneira rápida e eficiente. E o Docker Client permite que os usuários interajam com o Docker Daemon e gerenciem os containers de maneira fácil e intuitiva.
+      Espero que este artigo tenha ajudado a entender os conceitos e componentes do Docker e como eles funcionam juntos para permitir a criação e gerenciamento de containers de maneira fácil e eficiente. O Docker é uma ferramenta muito útil e popular para desenvolvedores e administradores de sistemas, e é amplamente utilizado em todo o mundo para criar, gerenciar e distribuir aplicativos em containers. Se você quiser aprender mais sobre o Docker ou começar a usá-lo em suas próprias aplicações, existem muitos recursos disponíveis na internet que podem ajudá-lo a começar. Boa sorte!
+      `,
     autor: 'Matheus Mol',
   },
 ];
